@@ -39,7 +39,7 @@ ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 
 # Make stand alone toolchain (Modify platform / arch here)
-RUN mkdir=toolchain-arm && bash $NDK_ROOT/build/tools/make-standalone-toolchain.sh --verbose --platform=android-19 --install-dir=toolchain-arm --arch=arm --toolchain=arm-linux-androideabi-clang3.6 --llvm-version=3.6 --system=linux-x86_64 --stl=libc++
+RUN mkdir=toolchain-arm && bash $NDK_ROOT/build/tools/make-standalone-toolchain.sh --verbose --platform=android-21 --install-dir=toolchain-arm --arch=arm --toolchain=arm-linux-androideabi-clang3.6 --llvm-version=3.6 --system=linux-x86_64 --stl=libc++
 
 ENV TOOLCHAIN /Android/toolchain-arm
 ENV SYSROOT $TOOLCHAIN/sysroot
